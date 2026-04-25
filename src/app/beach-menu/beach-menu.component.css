@@ -1,0 +1,264 @@
+/* =========================
+   THEME (HANEDAN HOTEL)
+   ========================= */
+:root {
+  --primary: #1a1a1a;
+  --secondary: #7a7a7a;
+
+  --accent: #c1121f;        /* logo kırmızı */
+  --accent-soft: #fce8ea;
+
+  --bg-main: #f3ede6;       /* kum / beach */
+  --bg-card: #ffffff;
+
+  --border: #e5dfd7;
+}
+
+/* =========================
+   BODY BACKGROUND
+   ========================= */
+body {
+  background: linear-gradient(
+    180deg,
+    #f3ede6 0%,
+    #ece3d7 100%
+  );
+  margin: 0;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+.menu-container {
+  position: relative;
+  max-width: 600px;
+  margin: 2.5rem auto;
+  padding: 1.8rem;
+
+  background: var(--bg-card);
+  border-radius: 20px;
+
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.3px;
+  color: var(--primary);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   LOGO
+   ========================= */
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-wrapper img {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+
+  transition: transform 0.4s ease;
+}
+
+.logo-wrapper img:hover {
+  transform: scale(1.04);
+}
+
+/* =========================
+   TITLE
+   ========================= */
+.menu-title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+/* =========================
+   LANGUAGE SWITCHER
+   ========================= */
+.language-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1.4rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.language-switcher button {
+  all: unset;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.language-switcher button:hover {
+  color: var(--accent);
+}
+
+.language-switcher button.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* =========================
+   CATEGORY NAV
+   ========================= */
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+}
+
+.category-nav button {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 1.2rem;
+
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.category-nav button:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* active */
+.category-nav button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* =========================
+   TABLE
+   ========================= */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #faf7f3;
+}
+
+/* =========================
+   ITEM
+   ========================= */
+.item-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.6rem 0;
+}
+
+.item-description {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-top: 0.2rem;
+  display: block;
+}
+
+.item-price {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: right;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+/* =========================
+   ALERT
+   ========================= */
+.alert {
+  text-align: center;
+  padding: 1rem;
+  background: #fff1f2;
+  color: var(--accent);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.alert-error {
+  background: #ffe5e7;
+  color: var(--accent);
+}
+
+/* =========================
+   EMPTY STATE
+   ========================= */
+.no-items {
+  text-align: center;
+  font-style: italic;
+  color: var(--secondary);
+  margin-top: 1rem;
+}
+
+/* =========================
+   GLOBAL TRANSITION
+   ========================= */
+* {
+  transition: all 0.25s ease;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  .menu-container {
+    margin: 1rem;
+    padding: 1.4rem;
+  }
+
+  .menu-title {
+    font-size: 1.6rem;
+  }
+
+  .category-nav button {
+    flex: 1 1 45%;
+    font-size: 0.85rem;
+  }
+
+  .item-name {
+    font-size: 1rem;
+  }
+
+  .item-price {
+    font-size: 0.95rem;
+  }
+
+  .language-switcher {
+    top: 0.5rem;
+    right: 1rem;
+  }
+}
