@@ -12,8 +12,8 @@ export class MenuService {
   isLoading = false;
   hasError = false;
 
-  //private baseURL = 'https://hanedan-be.up.railway.app/api/menu/list';
-  private baseURL = 'http://localhost:8080/api/menu/list';
+  private baseURL = 'https://hanedan-be.up.railway.app/api/menu/list';
+  //private baseURL = 'http://localhost:8080/api/menu/list';
 
   constructor(private httpClient: HttpClient) { }
 
