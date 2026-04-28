@@ -1,264 +1,197 @@
-/* =========================
-   THEME (HANEDAN HOTEL)
-   ========================= */
 :root {
-  --primary: #1a1a1a;
-  --secondary: #7a7a7a;
+  --black: #0d0d0d;
+  --dark: #1a1a1a;
+  --gray: #8a8a8a;
 
-  --accent: #c1121f;        /* logo kırmızı */
-  --accent-soft: #fce8ea;
+  --red: #c1121f;
+  --red-soft: rgba(193, 18, 31, 0.08);
 
-  --bg-main: #f3ede6;       /* kum / beach */
-  --bg-card: #ffffff;
+  --bg: #f8f6f2;
+  --card: #ffffff;
 
-  --border: #e5dfd7;
+  --border: #ececec;
 }
 
-/* =========================
-   BODY BACKGROUND
-   ========================= */
+/* BODY */
 body {
-  background: linear-gradient(
-    180deg,
-    #f3ede6 0%,
-    #ece3d7 100%
-  );
   margin: 0;
-}
-
-/* =========================
-   CONTAINER
-   ========================= */
-.menu-container {
-  position: relative;
-  max-width: 600px;
-  margin: 2.5rem auto;
-  padding: 1.8rem;
-
-  background: var(--bg-card);
-  border-radius: 20px;
-
+  background: var(--bg);
   font-family: 'Playfair Display', serif;
-  letter-spacing: 0.3px;
-  color: var(--primary);
-
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.08);
-
-  transition: all 0.3s ease;
 }
 
-/* =========================
-   LOGO
-   ========================= */
+/* CONTAINER */
+.menu-container {
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 2rem;
+
+  background: var(--card);
+  border-radius: 24px;
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+/* LOGO */
 .logo-wrapper {
   text-align: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
 }
 
 .logo-wrapper img {
-  width: 190px;
-  max-width: 100%;
-  height: auto;
-  user-select: none;
-
-  transition: transform 0.4s ease;
+  width: 160px;
+  opacity: 0.95;
 }
 
-.logo-wrapper img:hover {
-  transform: scale(1.04);
-}
-
-/* =========================
-   TITLE
-   ========================= */
+/* TITLE */
 .menu-title {
   text-align: center;
-  font-size: 2.1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
   margin-bottom: 2rem;
-  color: var(--primary);
+  color: var(--black);
 }
 
-/* =========================
-   LANGUAGE SWITCHER
-   ========================= */
+/* LANGUAGE */
 .language-switcher {
   position: absolute;
-  top: 1rem;
+  top: 1.2rem;
   right: 1.4rem;
-  display: flex;
-  gap: 1rem;
 }
 
 .language-switcher button {
   all: unset;
-  font-size: 0.9rem;
-  color: var(--secondary);
+  font-size: 0.8rem;
+  color: var(--gray);
   cursor: pointer;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-.language-switcher button:hover {
-  color: var(--accent);
+  margin-left: 10px;
 }
 
 .language-switcher button.active {
-  color: var(--accent);
-  font-weight: 700;
+  color: var(--red);
+  font-weight: 600;
 }
 
-/* =========================
-   CATEGORY NAV
-   ========================= */
+/* CATEGORY */
 .category-nav {
   display: flex;
-  flex-wrap: wrap;
+  overflow-x: auto;
   gap: 0.6rem;
-  justify-content: center;
+  padding-bottom: 10px;
   margin-bottom: 1.8rem;
 }
 
-.category-nav button {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.45rem 1.2rem;
+.category-nav::-webkit-scrollbar {
+  display: none;
+}
 
-  font-size: 0.9rem;
-  color: var(--secondary);
-  font-weight: 500;
+.category-nav button {
+  flex: 0 0 auto;
+
+  border: 1px solid var(--border);
+  background: transparent;
+
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+  color: var(--gray);
 
   cursor: pointer;
+}
+
+/* ACTIVE */
+.category-nav button.active {
+  background: var(--black);
+  color: #fff;
+  border-color: var(--black);
+}
+
+/* HOVER */
+.category-nav button:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* ITEM LIST */
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* ITEM CARD */
+tbody tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+
   transition: all 0.25s ease;
 }
 
-/* hover */
-.category-nav button:hover {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-/* active */
-.category-nav button.active {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-}
-
-/* =========================
-   TABLE
-   ========================= */
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-tbody tr {
-  border-bottom: 1px solid var(--border);
-  transition: all 0.2s ease;
-}
-
+/* HOVER EFFECT */
 tbody tr:hover {
-  background-color: #faf7f3;
+  transform: translateX(4px);
 }
 
-/* =========================
-   ITEM
-   ========================= */
+/* NAME */
 .item-name {
+  font-size: 1.05rem;
   font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.6rem 0;
+  color: var(--black);
 }
 
+/* DESC */
 .item-description {
-  font-size: 0.85rem;
-  color: var(--secondary);
-  margin-top: 0.2rem;
-  display: block;
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 4px;
 }
 
+/* PRICE */
 .item-price {
-  font-weight: 600;
   font-size: 1rem;
-  text-align: right;
-  color: var(--primary);
+  font-weight: 600;
+  color: var(--red);
   white-space: nowrap;
 }
 
-/* =========================
-   ALERT
-   ========================= */
+/* EMPTY */
+.no-items {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* ALERT */
 .alert {
   text-align: center;
   padding: 1rem;
-  background: #fff1f2;
-  color: var(--accent);
   border-radius: 10px;
-  font-weight: 600;
+  background: var(--red-soft);
+  color: var(--red);
 }
 
-.alert-error {
-  background: #ffe5e7;
-  color: var(--accent);
-}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-/* =========================
-   EMPTY STATE
-   ========================= */
-.no-items {
+  padding: 16px 0;
+  font-size: 0.95rem;
+  color: #3a4a3a;
+  font-weight: 500;
+
   text-align: center;
-  font-style: italic;
-  color: var(--secondary);
-  margin-top: 1rem;
 }
 
-/* =========================
-   GLOBAL TRANSITION
-   ========================= */
-* {
-  transition: all 0.25s ease;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 768px) {
+/* MOBILE */
+@media (max-width: 600px) {
   .menu-container {
     margin: 1rem;
-    padding: 1.4rem;
-  }
-
-  .menu-title {
-    font-size: 1.6rem;
-  }
-
-  .category-nav button {
-    flex: 1 1 45%;
-    font-size: 0.85rem;
-  }
-
-  .item-name {
-    font-size: 1rem;
-  }
-
-  .item-price {
-    font-size: 0.95rem;
-  }
-
-  .language-switcher {
-    top: 0.5rem;
-    right: 1rem;
+    padding: 1.5rem;
   }
 }

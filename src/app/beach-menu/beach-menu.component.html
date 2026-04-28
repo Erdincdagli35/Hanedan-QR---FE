@@ -21,10 +21,9 @@
     <nav class="category-nav">
       <button 
         *ngFor="let cat of categories" 
-        (click)="selectCategory(cat)"Q
-        [class.active]="cat === selectedCategory"v
-      >
-        {{ getCategoryLabel(cat) }}
+        (click)="selectCategory(cat)"
+        [class.active]="cat === selectedCategory"
+>
       </button>
     </nav>
 
@@ -48,4 +47,16 @@
       </div>
     </div>
   </div>
+
+  <footer class="footer">
+  <span>
+    © 2025 Developed by 
+    <a href="https://ed-software-solution.com/" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="footer-link">
+       ED Software Solution
+    </a>
+  </span>
+    </footer>
 </div>

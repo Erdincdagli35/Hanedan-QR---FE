@@ -1,51 +1,16 @@
 /* =========================
-   THEME (HANEDAN HOTEL)
-   ========================= */
-:root {
-  --primary: #1a1a1a;
-  --secondary: #7a7a7a;
-
-  --accent: #c1121f;        /* logo kırmızı */
-  --accent-soft: #fce8ea;
-
-  --bg-main: #f3ede6;       /* kum / beach */
-  --bg-card: #ffffff;
-
-  --border: #e5dfd7;
-}
-
-/* =========================
-   BODY BACKGROUND
-   ========================= */
-body {
-  background: linear-gradient(
-    180deg,
-    #f3ede6 0%,
-    #ece3d7 100%
-  );
-  margin: 0;
-}
-
-/* =========================
-   CONTAINER
+   HANEDAN THEME
    ========================= */
 .menu-container {
   position: relative;
   max-width: 600px;
-  margin: 2.5rem auto;
-  padding: 1.8rem;
-
-  background: var(--bg-card);
-  border-radius: 20px;
-
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 0.3px;
-  color: var(--primary);
-
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.08);
-
-  transition: all 0.3s ease;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, #faf7f4 0%, #f2ece6 100%);
+  border-radius: 16px;
+  font-family: 'Merriweather', serif;
+  color: #1a1a1a;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
@@ -54,21 +19,19 @@ body {
 .logo-wrapper {
   text-align: center;
   margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
+  background: radial-gradient(circle at center, #ffffff 0%, #f4f1ec 70%, #ece7e1 100%);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.06),
+    inset 0 0 20px rgba(0, 0, 0, 0.03);
 }
 
 .logo-wrapper img {
-  width: 190px;
+  width: 180px;
   max-width: 100%;
   height: auto;
-  user-select: none;
-
-  transition: transform 0.4s ease;
-}
-
-.logo-wrapper img:hover {
-  transform: scale(1.04);
+  border-radius: 8px;
 }
 
 /* =========================
@@ -76,79 +39,77 @@ body {
    ========================= */
 .menu-title {
   text-align: center;
-  font-size: 2.1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 2.6rem;
+  font-weight: 700;
   margin-bottom: 2rem;
-  color: var(--primary);
+  color: #111;
+  letter-spacing: 2px;
 }
 
 /* =========================
-   LANGUAGE SWITCHER
+   LANGUAGE
    ========================= */
 .language-switcher {
   position: absolute;
   top: 1rem;
-  right: 1.4rem;
+  right: 1.5rem;
   display: flex;
   gap: 1rem;
 }
 
 .language-switcher button {
   all: unset;
-  font-size: 0.9rem;
-  color: var(--secondary);
+  font-size: 0.95rem;
+  color: #444;
   cursor: pointer;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .language-switcher button:hover {
-  color: var(--accent);
+  color: #c1121f;
+  text-decoration: underline;
 }
 
 .language-switcher button.active {
-  color: var(--accent);
-  font-weight: 700;
+  color: #c1121f;
+  text-decoration: underline;
 }
 
 /* =========================
-   CATEGORY NAV
+   CATEGORY
    ========================= */
 .category-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.5rem;
   justify-content: center;
-  margin-bottom: 1.8rem;
+  border-bottom: 2px solid #e5e0db;
+  margin-bottom: 1.5rem;
 }
 
 .category-nav button {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.45rem 1.2rem;
-
-  font-size: 0.9rem;
-  color: var(--secondary);
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #222;
   font-weight: 500;
-
-  cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.25s;
+  flex: 1 1 calc(33.33% - 1rem);
+  text-align: center;
+  min-width: 100px;
 }
 
-/* hover */
 .category-nav button:hover {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: var(--accent);
+  background-color: #f7f7f7;
+  color: #c1121f;
 }
 
-/* active */
 .category-nav button.active {
-  background: var(--accent);
+  background: linear-gradient(135deg, #c1121f, #8b0d17);
   color: #fff;
-  border-color: var(--accent);
+  border: none;
 }
 
 /* =========================
@@ -165,36 +126,37 @@ table {
 }
 
 tbody tr {
-  border-bottom: 1px solid var(--border);
-  transition: all 0.2s ease;
+  border-bottom: 1px solid #e5e0db;
 }
 
 tbody tr:hover {
-  background-color: #faf7f3;
+  background-color: #fafafa;
 }
 
 /* =========================
    ITEM
    ========================= */
 .item-name {
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.6rem 0;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0.5rem 0;
 }
 
 .item-description {
-  font-size: 0.85rem;
-  color: var(--secondary);
-  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.25rem;
   display: block;
 }
 
 .item-price {
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
   text-align: right;
-  color: var(--primary);
+  padding-bottom: 0.8rem;
+  color: #c1121f;
   white-space: nowrap;
+  vertical-align: top;
 }
 
 /* =========================
@@ -203,32 +165,79 @@ tbody tr:hover {
 .alert {
   text-align: center;
   padding: 1rem;
-  background: #fff1f2;
-  color: var(--accent);
-  border-radius: 10px;
+  background: #fce8ea;
+  color: #7a1c22;
+  border-radius: 6px;
   font-weight: 600;
 }
 
 .alert-error {
-  background: #ffe5e7;
-  color: var(--accent);
+  background: #f8d7da;
+  color: #842029;
 }
 
 /* =========================
-   EMPTY STATE
+   EMPTY
    ========================= */
 .no-items {
   text-align: center;
   font-style: italic;
-  color: var(--secondary);
+  color: #999;
   margin-top: 1rem;
 }
 
 /* =========================
-   GLOBAL TRANSITION
+   BUTTON BASE
    ========================= */
-* {
-  transition: all 0.25s ease;
+button {
+  font-family: 'Merriweather', serif;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* =========================
+   ADMIN BUTTONS
+   ========================= */
+.add-btn {
+  background: linear-gradient(135deg, #c1121f, #8b0d17);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(193, 18, 31, 0.2);
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+}
+
+.edit-btn,
+.delete-btn {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  background: #f4f1ec;
+  color: #333;
+  border: 1px solid #ddd;
+  margin-left: 40px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background: #fff;
+  color: #c1121f;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px 0;
+  font-size: 0.95rem;
+  color: #3a4a3a;
+  font-weight: 500;
+
+  text-align: center;
 }
 
 /* =========================
@@ -237,7 +246,11 @@ tbody tr:hover {
 @media (max-width: 768px) {
   .menu-container {
     margin: 1rem;
-    padding: 1.4rem;
+    padding: 1rem;
+  }
+
+  .logo-wrapper {
+    margin-top: 2rem;
   }
 
   .menu-title {
@@ -246,7 +259,6 @@ tbody tr:hover {
 
   .category-nav button {
     flex: 1 1 45%;
-    font-size: 0.85rem;
   }
 
   .item-name {
@@ -254,7 +266,7 @@ tbody tr:hover {
   }
 
   .item-price {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .language-switcher {
