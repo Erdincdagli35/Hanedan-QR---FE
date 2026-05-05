@@ -309,3 +309,66 @@ button {
     right: 1rem;
   }
 }
+/* =========================
+   SECOND TITLE
+   ========================= */
+.menu-title2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   ADMIN ACTION BAR
+   ========================= */
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-btn {
+  background: #f4f1ec;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  transition: all 0.25s;
+}
+
+.menu-btn:hover {
+  background: #fff;
+  color: #c1121f;
+}
+
+/* =========================
+   ITEM ACTIONS
+   ========================= */
+.item-actions {
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+/* Buton spacing fix */
+.item-actions button {
+  margin-left: 0.4rem;
+}
+
+/* =========================
+   TABLE IMPROVEMENT
+   ========================= */
+tbody tr td {
+  padding: 0.6rem 0;
+  vertical-align: top;
+}
+
+/* Hover daha soft */
+tbody tr:hover {
+  background-color: #f9f7f5;
+}

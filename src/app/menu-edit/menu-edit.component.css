@@ -1,0 +1,220 @@
+
+/* =========================
+   CLEAN ADMIN EDIT UI
+   SHARED DESIGN SYSTEM
+   ========================= */
+
+/* PAGE */
+body {
+  background: #f5f6f8;
+  margin: 0;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  color: #1f2937;
+  font-family: Inter, system-ui, sans-serif;
+
+  position: relative;
+  overflow: visible;
+  border: 1px solid #ececec;
+}
+
+/* TITLE */
+.container h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #111827;
+  position: relative;
+}
+
+.container h3::after {
+  content: "";
+  width: 55px;
+  height: 3px;
+  background: #ef4444;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border-radius: 10px;
+}
+
+/* LABEL */
+.form-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* INPUTS */
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+/* ERROR */
+.text-danger {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #ef4444;
+}
+
+/* =========================
+   BUTTON SYSTEM
+   ========================= */
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: none;
+}
+
+/* PRIMARY */
+.btn-primary {
+  background: #ef4444;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.2);
+}
+
+.btn-primary:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* SECONDARY */
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* =========================
+   DROPDOWN FIX (CRITICAL)
+   ========================= */
+
+.mb-3 {
+  position: relative;
+}
+
+/* WRAPPER */
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+/* TRIGGER BUTTON */
+.btn-outline-primary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+  border-color: #ef4444;
+}
+
+/* DROPDOWN MENU (FIXED POSITION) */
+.dropdown-menu {
+  position: absolute !important;
+
+  top: 72px; /* label + button hizası */
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  margin: 0 !important;
+  padding: 6px;
+
+  list-style: none;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+
+  max-height: 240px;
+  overflow-y: auto;
+
+  z-index: 99999 !important;
+
+  display: none;
+}
+
+/* OPEN STATE */
+.dropdown-menu.show {
+  display: block !important;
+}
+
+/* ITEMS */
+.dropdown-item {
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  transition: 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+  padding-left: 16px;
+}
+
+/* =========================
+   TRANSLATION BOXES
+   ========================= */
+
+.border {
+  background: #fafafa;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+}
+
+/* SPACING SYSTEM */
+.mb-3,
+.mb-2,
+.mb-4 {
+  margin-bottom: 14px !important;
+}
+
+/* HOVER POLISH */
+input:hover,
+textarea:hover {
+  border-color: #d1d5db;
+}

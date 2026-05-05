@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router'; 
 import { BeachCategory } from '../model/beach-category';
 import { BeachMenu } from '../model/beach-menu';
 import { MenuService } from '../service/menu-service';
@@ -17,15 +17,21 @@ export class BeachMenuComponent {
     selectedCategory: BeachCategory | null = null;
     currentLang: string = 'TR'; 
   
-    constructor(private menuService: MenuService) {}
+    constructor(private menuService: MenuService, private router: Router) {}
   
     ngOnInit(): void {
       this.fetchMenu();
     }
   
+    navigateToAdminPanel() {
+    this.router.navigate(['admin/login']).then(() => {
+        window.location.reload();
+      });
+  }
+
     fetchMenu(): void {
       this.isLoading = true;
-      this.menuService.getBeachMenuList(this.currentLang).subscribe({
+      this.menuService.getMenuList(this.currentLang).subscribe({
         next: (data) => {
           this.menuItems = data;
           this.isLoading = false;
